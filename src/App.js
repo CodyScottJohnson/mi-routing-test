@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
         <div>
-        <BrowserRouter>
+        <BrowserRouter basename={'/p/routing-test'}>
         <div>
           <h1>Simple SPA</h1>
           <ul className="header">
