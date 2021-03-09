@@ -3,17 +3,17 @@ import React, { Component } from "react";
 import {
   Route,
   NavLink,
-  BrowserRouter
+  HashRouter
 } from "react-router-dom";
-import Home from "./home";
-import Stuff from "./stuff";
-import Contact from "./contact";
+import Home from "./Home";
+import Stuff from "./Stuff";
+import Contact from "./Contact";
 
-class App extends Component {
+class Main extends Component {
   render() {
     return (
         <div>
-        <BrowserRouter>
+        <HashRouter>
         <div>
           <h1>Simple SPA</h1>
           <ul className="header">
@@ -25,16 +25,15 @@ class App extends Component {
              
           </div>
         </div>
-        <div className="content">
+      </HashRouter>
+      <div className="content">
       <Route exact path="/" component={Home}/>
       <Route path="/stuff" component={Stuff}/>
       <Route path="/contact" component={Contact}/>
     </div>
-      </BrowserRouter>
-     
     </div>
     );
   }
 }
  
-export default App;
+export default Main;
